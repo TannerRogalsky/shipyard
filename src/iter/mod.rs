@@ -29,6 +29,7 @@ use crate::sparse_set::{FullRawWindow, FullRawWindowMut};
 use core::iter::FusedIterator;
 
 /// Handles storages iteration.
+#[derive(Clone)]
 pub struct Shiperator<S> {
     pub(crate) shiperator: S,
     pub(crate) entities: RawEntityIdAccess,

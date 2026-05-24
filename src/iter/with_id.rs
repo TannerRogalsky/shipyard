@@ -3,6 +3,7 @@ use crate::iter::{Shiperator, ShiperatorCaptain, ShiperatorSailor};
 use core::iter::FusedIterator;
 
 /// Iterator that returns the [`EntityId`] alongside the component(s).
+#[derive(Clone)]
 pub struct WithId<S>(pub(crate) S);
 
 impl<S> Shiperator<S> {
